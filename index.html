@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Aanchal Mahajan, CA — Process Optimization & Operational Excellence</title>
+<meta name="description" content="Aanchal Mahajan — Chartered Accountant and process optimization professional with 15+ years across Heineken and Booking Holdings. Based in Munich. Available from 01.06.2026." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Geist:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    /* Paper & ink */
+    --bg:         #F2ECDF;
+    --bg-soft:    #EAE2D0;
+    --paper:      #FAF6EC;
+    --ink:        #1A1612;
+    --ink-2:      #3A332B;
+    --ink-soft:   #6B6258;
+    --muted:      #9A9080;
+    --rule:       #D9CFBB;
+    --rule-soft:  #E5DDCB;
+
+    /* Single accent — sienna */
+    --accent:     #8C3A1A;
+    --accent-2:   #B85A36;
+
+    /* Type */
+    --display: 'Fraunces', 'Garamond', 'Georgia', serif;
+    --sans:    'Geist', -apple-system, 'Segoe UI', sans-serif;
+    --mono:    'JetBrains Mono', ui-monospace, monospace;
+
+    /* Scale */
+    --max:     1240px;
+    --gutter:  clamp(1.25rem, 4vw, 3rem);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.55;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  /* Subtle paper grain */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.35;
+    mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.4   0 0 0 0 0.35   0 0 0 0 0.28   0 0 0 0.08 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+
+  ::selection { background: var(--accent); color: var(--paper); }
+
+  a { color: inherit; text-decoration: none; }
+
+  /* ---------- Layout shell ---------- */
+  .shell {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Top meta bar */
+  .topbar {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 1.25rem 0 0.9rem;
+    border-bottom: 1px solid var(--rule);
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .topbar .center { text-align: center; }
+  .topbar .right { text-align: right; }
+  .topbar .dot {
+    display: inline-block;
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: #2E7D3E;
+    margin-right: 0.4rem;
+    transform: translateY(-1px);
+    box-shadow: 0 0 0 3px rgba(46,125,62,0.18);
+    animation: pulse 2.6s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 3px rgba(46,125,62,0.18); }
+    50%      { box-shadow: 0 0 0 6px rgba(46,125,62,0.06); }
+  }
+
+  /* ---------- Section primitive ---------- */
+  section { padding: clamp(3.5rem, 9vw, 7.5rem) 0; position: relative; }
+  section + section { border-top: 1px solid var(--rule); }
+
+  .section-head {
+    display: grid;
+    grid-template-columns: 7rem 1fr;
+    gap: 2rem;
+    align-items: baseline;
+    margin-bottom: clamp(2rem, 4vw, 3.5rem);
+  }
+  .section-num {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    text-transform: uppercase;
+  }
+  .section-title {
+    font-family: var(--display);
+    font-weight: 400;
+    font-variation-settings: "SOFT" 30, "WONK" 0, "opsz" 144;
+    font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+    line-height: 1;
+    letter-spacing: -0.01em;
+    margin: 0;
+    color: var(--ink);
+  }
+  .section-title em {
+    font-style: italic;
+    font-variation-settings: "SOFT" 100, "WONK" 1, "opsz" 144;
+    color: var(--accent);
+  }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    padding-top: clamp(4rem, 8vw, 7rem);
+    padding-bottom: clamp(4rem, 8vw, 6rem);
+    position: relative;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .hero-pretitle {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .hero-pretitle::before {
+    content: "";
+    width: 2.5rem;
+    height: 1px;
+    background: var(--ink);
+  }
+
+  .hero-name {
+    font-family: var(--display);
+    font-weight: 300;
+    font-variation-settings: "SOFT" 50, "opsz" 144;
+    font-size: clamp(3.6rem, 11vw, 9rem);
+    line-height: 0.92;
+    letter-spacing: -0.035em;
+    margin: 0;
+    color: var(--ink);
+  }
+  .hero-name .ca {
+    font-style: italic;
+    font-weight: 300;
+    font-variation-settings: "SOFT" 100, "WONK" 1, "opsz" 144;
+    color: var(--accent);
+    font-size: 0.5em;
+    vertical-align: 0.55em;
+    letter-spacing: 0;
+    margin-left: 0.2em;
+  }
+
+  .hero-tagline {
+    margin-top: 1.4rem;
+    font-family: var(--display);
+    font-style: italic;
+    font-variation-settings: "SOFT" 100, "WONK" 1, "opsz" 24;
+    font-weight: 300;
+    font-size: clamp(1.15rem, 2vw, 1.5rem);
+    line-height: 1.35;
+    color: var(--ink-2);
+    max-width: 38ch;
+  }
+
+  .hero-meta {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1.5rem 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+    max-width: 800px;
+  }
+  .hero-meta .label {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-bottom: 0.4rem;
+  }
+  .hero-meta .value {
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: 1.05rem;
+    color: var(--ink);
+    line-height: 1.25;
+  }
+  .hero-meta .value.small {
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  /* Decorative side stamp */
+  .hero-stamp {
+    position: absolute;
+    top: 4rem;
+    right: var(--gutter);
+    font-family: var(--mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: right;
+    line-height: 1.8;
+    display: none;
+  }
+  @media (min-width: 900px) {
+    .hero-stamp { display: block; }
+  }
+  .hero-stamp .lg {
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+
+  /* ---------- PROFILE ---------- */
+  .profile-body {
+    display: grid;
+    grid-template-columns: 7rem 1fr;
+    gap: 2rem;
+  }
+  .profile-body > .spacer { display: block; }
+  .profile-prose {
+    max-width: 62ch;
+    font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+    line-height: 1.6;
+    color: var(--ink-2);
+    font-weight: 400;
+  }
+  .profile-prose p + p { margin-top: 1.3em; }
+  .profile-prose strong {
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .lead {
+    font-family: var(--display);
+    font-weight: 300;
+    font-variation-settings: "SOFT" 40, "opsz" 24;
+    font-size: clamp(1.35rem, 2vw, 1.7rem) !important;
+    line-height: 1.4 !important;
+    color: var(--ink) !important;
+  }
+  .lead .acc {
+    font-style: italic;
+    font-variation-settings: "SOFT" 100, "WONK" 1, "opsz" 24;
+    color: var(--accent);
+  }
+
+  /* ---------- EXPERIENCE ---------- */
+  .roles {
+    display: grid;
+    gap: 0;
+  }
+  .role {
+    display: grid;
+    grid-template-columns: 7rem 1fr;
+    gap: 2rem;
+    padding: 2.5rem 0;
+    border-top: 1px solid var(--rule-soft);
+    position: relative;
+  }
+  .role:first-child { border-top: none; padding-top: 0; }
+
+  .role-period {
+    font-family: var(--mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    color: var(--ink-soft);
+    padding-top: 0.4rem;
+    line-height: 1.5;
+  }
+  .role-period .now {
+    color: var(--accent);
+    display: inline-block;
+  }
+
+  .role-body { min-width: 0; }
+  .role-company {
+    font-family: var(--display);
+    font-weight: 400;
+    font-variation-settings: "SOFT" 30, "opsz" 144;
+    font-size: clamp(1.5rem, 2.6vw, 2rem);
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    margin: 0 0 0.35rem;
+    color: var(--ink);
+  }
+  .role-company .ctx {
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    font-weight: 400;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-left: 0.5rem;
+    vertical-align: 0.25em;
+  }
+  .role-title {
+    font-family: var(--display);
+    font-style: italic;
+    font-variation-settings: "SOFT" 100, "WONK" 1, "opsz" 24;
+    font-weight: 400;
+    color: var(--accent);
+    font-size: 1.05rem;
+    margin: 0 0 1.1rem;
+  }
+
+  .role-points {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.85rem;
+  }
+  .role-points li {
+    padding-left: 1.6rem;
+    position: relative;
+    color: var(--ink-2);
+    line-height: 1.55;
+    font-size: 0.97rem;
+  }
+  .role-points li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.7em;
+    width: 0.85rem;
+    height: 1px;
+    background: var(--accent);
+  }
+  .role-points li b {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  /* Compact role for older entries */
+  .role-compact .role-points {
+    color: var(--ink-soft);
+    font-size: 0.93rem;
+  }
+  .role-compact .role-points li {
+    padding-left: 0;
+  }
+  .role-compact .role-points li::before { display: none; }
+
+  /* ---------- METRICS strip ---------- */
+  .metrics {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    margin: clamp(2rem, 4vw, 3rem) 0 0;
+  }
+  .metric {
+    padding: 1.8rem 1.5rem 1.5rem 0;
+    border-right: 1px solid var(--rule-soft);
+  }
+  .metric:last-child { border-right: none; }
+  .metric .n {
+    font-family: var(--display);
+    font-variation-settings: "SOFT" 30, "opsz" 144;
+    font-weight: 300;
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    line-height: 1;
+    color: var(--ink);
+    letter-spacing: -0.025em;
+  }
+  .metric .n sup {
+    font-size: 0.4em;
+    color: var(--accent);
+    vertical-align: 1.4em;
+    margin-left: 0.1em;
+    font-style: italic;
+    font-variation-settings: "SOFT" 100, "WONK" 1;
+  }
+  .metric .lbl {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 0.6rem;
+    line-height: 1.5;
+  }
+
+  /* ---------- SKILLS ---------- */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2.5rem 3rem;
+  }
+  .skill-cat {
+    position: relative;
+  }
+  .skill-cat .cat-num {
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    margin-bottom: 0.6rem;
+    display: block;
+  }
+  .skill-cat h3 {
+    font-family: var(--display);
+    font-weight: 400;
+    font-variation-settings: "SOFT" 40, "opsz" 24;
+    font-size: 1.2rem;
+    margin: 0 0 1rem;
+    color: var(--ink);
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .skill-cat ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+  .skill-cat li {
+    font-size: 0.92rem;
+    color: var(--ink-2);
+    line-height: 1.45;
+  }
+
+  /* ---------- EDUCATION ---------- */
+  .edu-list {
+    display: grid;
+    gap: 1.6rem;
+  }
+  .edu-item {
+    display: grid;
+    grid-template-columns: 7rem 1fr;
+    gap: 2rem;
+    padding-bottom: 1.6rem;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .edu-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .edu-item .tag {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    text-transform: uppercase;
+    padding-top: 0.2rem;
+  }
+  .edu-item .name {
+    font-family: var(--display);
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: var(--ink);
+    margin: 0 0 0.25rem;
+    line-height: 1.3;
+  }
+  .edu-item .desc {
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+    font-style: italic;
+    font-family: var(--display);
+    font-variation-settings: "SOFT" 80, "WONK" 1, "opsz" 14;
+  }
+
+  /* ---------- LANGUAGES ---------- */
+  .langs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 1.5rem 2rem;
+  }
+  .lang {
+    border-top: 1px solid var(--rule);
+    padding-top: 1rem;
+  }
+  .lang .name {
+    font-family: var(--display);
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--ink);
+    line-height: 1;
+    margin-bottom: 0.6rem;
+  }
+  .lang .level {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .lang .bar {
+    margin-top: 0.6rem;
+    display: flex;
+    gap: 3px;
+  }
+  .lang .bar span {
+    flex: 1;
+    height: 2px;
+    background: var(--rule);
+  }
+  .lang .bar span.on { background: var(--accent); }
+
+  /* ---------- CONTACT ---------- */
+  .contact {
+    background: var(--paper);
+    margin: 0 calc(-1 * var(--gutter));
+    padding: clamp(4rem, 8vw, 7rem) var(--gutter);
+    border-top: 1px solid var(--rule);
+  }
+  .contact-inner {
+    max-width: var(--max);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 7rem 1fr;
+    gap: 2rem;
+  }
+  .contact-head {
+    font-family: var(--display);
+    font-weight: 300;
+    font-variation-settings: "SOFT" 40, "opsz" 144;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin: 0 0 0.5rem;
+    color: var(--ink);
+  }
+  .contact-head em {
+    font-style: italic;
+    font-variation-settings: "SOFT" 100, "WONK" 1, "opsz" 144;
+    color: var(--accent);
+  }
+  .contact-sub {
+    color: var(--ink-soft);
+    max-width: 48ch;
+    margin: 0 0 2.5rem;
+    font-size: 1.05rem;
+  }
+  .contact-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--rule);
+  }
+  .contact-item .label {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.4rem;
+  }
+  .contact-item .val {
+    font-family: var(--display);
+    font-size: 1.1rem;
+    color: var(--ink);
+    transition: color 0.2s ease;
+  }
+  .contact-item a:hover .val {
+    color: var(--accent);
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    padding: 2rem 0 2.5rem;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-family: var(--mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* ---------- Mobile ---------- */
+  @media (max-width: 720px) {
+    .section-head,
+    .profile-body,
+    .role,
+    .edu-item,
+    .contact-inner {
+      grid-template-columns: 1fr;
+      gap: 0.8rem;
+    }
+    .section-num { margin-bottom: 0.2rem; }
+    .role { padding: 2rem 0; }
+    .role-period { padding-top: 0; }
+    .metric { border-right: none; border-bottom: 1px solid var(--rule-soft); }
+    .metric:last-child { border-bottom: none; }
+    .topbar { font-size: 0.62rem; }
+    .topbar .right .hide-sm { display: none; }
+  }
+
+  /* ---------- Entrance animation ---------- */
+  .reveal {
+    opacity: 0;
+    transform: translateY(14px);
+    animation: reveal 0.9s cubic-bezier(0.2, 0.7, 0.3, 1) forwards;
+  }
+  .reveal.d1 { animation-delay: 0.05s; }
+  .reveal.d2 { animation-delay: 0.18s; }
+  .reveal.d3 { animation-delay: 0.32s; }
+  .reveal.d4 { animation-delay: 0.46s; }
+  .reveal.d5 { animation-delay: 0.6s; }
+  @keyframes reveal {
+    to { opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="shell">
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="left">Aanchal Mahajan · CA</div>
+    <div class="center">München / Munich</div>
+    <div class="right"><span class="dot"></span><span class="hide-sm">Available </span>01.06.2026</div>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-stamp">
+      Curriculum Vitae<br>
+      <span class="lg">Anno MMXXVI</span>
+      Munich, DE — 01/04
+    </div>
+
+    <div class="hero-grid">
+      <div class="hero-pretitle reveal d1">Portfolio — Senior Finance · Controls · Operations</div>
+
+      <h1 class="hero-name reveal d2">
+        Aanchal<br>Mahajan<span class="ca">, CA</span>
+      </h1>
+
+      <p class="hero-tagline reveal d3">
+        Operational excellence with embedded risk intelligence — fifteen years turning complex finance processes into measurable outcomes.
+      </p>
+
+      <div class="hero-meta reveal d4">
+        <div>
+          <span class="label">Discipline</span>
+          <span class="value">Process Optimization<br>& Internal Controls</span>
+        </div>
+        <div>
+          <span class="label">Currently</span>
+          <span class="value">Senior Manager<br>Heineken NV</span>
+        </div>
+        <div>
+          <span class="label">Standort</span>
+          <span class="value">Munich, Bavaria<br><span class="value small">Bayern, Deutschland</span></span>
+        </div>
+        <div>
+          <span class="label">Authorization</span>
+          <span class="value">EU Blue Card<br><span class="value small">Dependent · Unrestricted</span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- PROFILE -->
+  <section id="profile">
+    <div class="section-head">
+      <div class="section-num">01 — Profil</div>
+      <h2 class="section-title">A profile <em>at a glance</em></h2>
+    </div>
+    <div class="profile-body">
+      <div class="spacer"></div>
+      <div class="profile-prose">
+        <p class="lead">
+          Process optimization and operational excellence professional with <span class="acc">15+ years</span> identifying, analyzing, and improving core business processes across large multinational organisations.
+        </p>
+        <p>
+          Proven expertise in <strong>process documentation, KPI design, cross-functional project management, and data-driven decision-making</strong>. Certified Lean Six Sigma practitioner (Yellow Belt, Heineken; Green Belt in progress) with a hands-on track record of delivering measurable results from concept to rollout.
+        </p>
+        <p>
+          Strong communicator experienced in managing diverse stakeholders across complex global organisational structures. <strong>Chartered Accountant</strong> (Indian CA — equivalent to European statutory auditor qualification); <strong>IIM Bangalore</strong> alumna.
+        </p>
+        <p>
+          Currently serving notice period; last working day 31 May 2026, fully available and based in Munich thereafter.
+        </p>
+      </div>
+    </div>
+
+    <!-- Metric strip -->
+    <div class="metrics" style="margin-left: 9rem;">
+      <div class="metric">
+        <div class="n">15<sup>+</sup></div>
+        <div class="lbl">Years of<br>Experience</div>
+      </div>
+      <div class="metric">
+        <div class="n">€100K<sup>+</sup></div>
+        <div class="lbl">Savings delivered<br>Six Sigma Yellow Belt</div>
+      </div>
+      <div class="metric">
+        <div class="n">55<sup>%</sup></div>
+        <div class="lbl">Reduction in<br>audit findings · Priceline</div>
+      </div>
+      <div class="metric">
+        <div class="n">200<sup>+</sup></div>
+        <div class="lbl">Key processes<br>mapped at UBL</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="section-head">
+      <div class="section-num">02 — Erfahrung</div>
+      <h2 class="section-title">Selected <em>experience</em></h2>
+    </div>
+
+    <div class="roles">
+
+      <article class="role">
+        <div class="role-period">
+          08/2024<br>—<br><span class="now">Present</span>
+        </div>
+        <div class="role-body">
+          <h3 class="role-company">Heineken NV <span class="ctx">United Breweries · Bangalore</span></h3>
+          <p class="role-title">Senior Manager — Process & Controls Improvement</p>
+          <ul class="role-points">
+            <li><b>Identify, analyze, and optimize core business processes</b> across 200+ key processes; create and maintain process documentation and visual process maps (RACM) to ensure transparency and standardization across UBL operations and group reporting entities.</li>
+            <li><b>Define and track meaningful KPIs</b> to monitor process performance and drive data-driven decision-making; present process performance scorecards to CEO and senior leadership with actionable insights on efficiency and risk.</li>
+            <li><b>Lead global process improvement workstreams</b> using Lean Six Sigma methodology — delivered €100K+ savings (Yellow Belt, Heineken certified); managing Green Belt project targeting €200K in operational efficiencies, concept through rollout.</li>
+            <li>Manage diverse stakeholders across departments and geographies — communicating complex process changes clearly and ensuring alignment across business units, control owners, and senior management.</li>
+            <li>Spearhead market and distributor audit program applying risk-based process analysis; coordinate cross-functional projects from scoping to implementation with external vendors and internal teams.</li>
+            <li>Apply AI tools to workflow automation and process enhancement — ICAI certified in AI applications; led AI innovation initiative at Heineken finance offsite demonstrating practical process use cases.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="role">
+        <div class="role-period">
+          2021<br>—<br>05/2024
+        </div>
+        <div class="role-body">
+          <h3 class="role-company">Priceline.com <span class="ctx">Booking Holdings Inc. · OTA</span></h3>
+          <p class="role-title">Senior Accountant — Financial Controls & Process Improvement</p>
+          <ul class="role-points">
+            <li><b>Identified process inefficiencies</b> and implemented sustainable solutions across O2C, P2P and R2R process areas — achieving <b>55% reduction in audit findings</b> over two years through systematic process redesign and standardization.</li>
+            <li>Created process documentation and SOPs to ensure transparency and consistent execution across finance operations; led walkthrough sessions and effectiveness assessments to validate process design.</li>
+            <li>Contributed to ERP implementation — analyzed requirements, mapped process flows, identified automation opportunities (RPA), and supported rollout across cross-functional teams.</li>
+            <li>Performed data and process analysis to transform raw financial information into actionable management insights; delivered variance analysis and reporting for senior stakeholders.</li>
+            <li>Built and developed team capabilities through structured training on process frameworks and operational standards.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="role">
+        <div class="role-period">
+          2017<br>—<br>2021
+        </div>
+        <div class="role-body">
+          <h3 class="role-company">Nexsus Business Solutions Pvt Ltd <span class="ctx">Mumbai</span></h3>
+          <p class="role-title">Manager — Finance & Strategic Planning</p>
+          <ul class="role-points">
+            <li>Implemented standardized process frameworks and SOPs across finance operations; <b>defined KPIs and performance metrics</b> to monitor process efficiency and support data-driven management decisions.</li>
+            <li>Managed cross-functional projects end-to-end — budgeting, forecasting, cash flow optimization — coordinating diverse stakeholders and ensuring delivery from concept through execution.</li>
+            <li>Secured overdraft financing facility within two months through structured analysis and stakeholder negotiations — a project requiring rapid process design, financial modeling, and multi-party alignment.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="role role-compact">
+        <div class="role-period">
+          2011<br>—<br>2017
+        </div>
+        <div class="role-body">
+          <h3 class="role-company">Earlier roles</h3>
+          <ul class="role-points">
+            <li><b>Deputy Manager</b> — Agrawal Goyal & Associates (2016–17)</li>
+            <li><b>Article Assistant · CA Training</b> — Desai Associates (2011–16)</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-head">
+      <div class="section-num">03 — Kompetenzen</div>
+      <h2 class="section-title">Skills & <em>technical proficiency</em></h2>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-cat">
+        <span class="cat-num">01</span>
+        <h3>Process Optimization</h3>
+        <ul>
+          <li>Process identification, analysis & redesign</li>
+          <li>Process documentation & mapping</li>
+          <li>SOP design & standardization</li>
+          <li>KPI definition & monitoring</li>
+          <li>Operational excellence</li>
+        </ul>
+      </div>
+
+      <div class="skill-cat">
+        <span class="cat-num">02</span>
+        <h3>Methodologies</h3>
+        <ul>
+          <li>Lean Six Sigma — Yellow Belt certified</li>
+          <li>Green Belt (in progress)</li>
+          <li>Workshop facilitation</li>
+          <li>Requirements management</li>
+          <li>Agile frameworks · project lifecycle</li>
+        </ul>
+      </div>
+
+      <div class="skill-cat">
+        <span class="cat-num">03</span>
+        <h3>Data & Analytics</h3>
+        <ul>
+          <li>Data & process analysis</li>
+          <li>Variance analysis & financial modeling</li>
+          <li>Management reporting</li>
+          <li>Power BI · Tableau</li>
+          <li>Advanced Excel</li>
+        </ul>
+      </div>
+
+      <div class="skill-cat">
+        <span class="cat-num">04</span>
+        <h3>Stakeholder Management</h3>
+        <ul>
+          <li>Cross-functional leadership</li>
+          <li>Change management</li>
+          <li>Complex stakeholder navigation</li>
+          <li>Global team collaboration</li>
+          <li>Senior executive communication</li>
+        </ul>
+      </div>
+
+      <div class="skill-cat">
+        <span class="cat-num">05</span>
+        <h3>Technical Systems</h3>
+        <ul>
+          <li>SAP · Oracle</li>
+          <li>Hyperion · OneStream · Essbase</li>
+          <li>Microsoft Office (Advanced)</li>
+          <li>ERP implementation support</li>
+        </ul>
+      </div>
+
+      <div class="skill-cat">
+        <span class="cat-num">06</span>
+        <h3>AI & Automation</h3>
+        <ul>
+          <li>AI workflow automation (ICAI certified)</li>
+          <li>RPA identification</li>
+          <li>ERP implementation support</li>
+          <li>Process digitization</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="section-head">
+      <div class="section-num">04 — Ausbildung</div>
+      <h2 class="section-title">Education & <em>qualifications</em></h2>
+    </div>
+
+    <div class="edu-list">
+      <div class="edu-item">
+        <div class="tag">CA · ICAI</div>
+        <div>
+          <h3 class="name">Chartered Accountant</h3>
+          <div class="desc">The Institute of Chartered Accountants of India — equivalent to European statutory auditor qualification</div>
+        </div>
+      </div>
+
+      <div class="edu-item">
+        <div class="tag">Executive</div>
+        <div>
+          <h3 class="name">Executive General Management Programme</h3>
+          <div class="desc">Indian Institute of Management Bangalore — IIM-B</div>
+        </div>
+      </div>
+
+      <div class="edu-item">
+        <div class="tag">B.Com</div>
+        <div>
+          <h3 class="name">Bachelor of Commerce</h3>
+          <div class="desc">Mumbai University — State Rank Holder in Economics</div>
+        </div>
+      </div>
+
+      <div class="edu-item">
+        <div class="tag">Certifications</div>
+        <div>
+          <h3 class="name">Continuing professional development</h3>
+          <div class="desc">Lean Six Sigma Yellow Belt (Heineken) · Green Belt (in progress) · HBS Online — Leading with Finance · Financial Accounting · EY — US GAAP · ICAI — AI Applications · Toastmasters</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LANGUAGES -->
+  <section id="languages">
+    <div class="section-head">
+      <div class="section-num">05 — Sprachen</div>
+      <h2 class="section-title">Languages & <em>fluency</em></h2>
+    </div>
+
+    <div class="langs">
+      <div class="lang">
+        <div class="name">English</div>
+        <div class="level">Full Professional</div>
+        <div class="bar"><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span></div>
+      </div>
+      <div class="lang">
+        <div class="name">Hindi</div>
+        <div class="level">Native</div>
+        <div class="bar"><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span></div>
+      </div>
+      <div class="lang">
+        <div class="name">Deutsch</div>
+        <div class="level">A2 → B1 in progress</div>
+        <div class="bar"><span class="on"></span><span class="on"></span><span></span><span></span><span></span></div>
+      </div>
+      <div class="lang">
+        <div class="name">Français</div>
+        <div class="level">Beginner</div>
+        <div class="bar"><span class="on"></span><span></span><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div class="section-num">06 — Kontakt</div>
+    <div>
+      <h2 class="contact-head">Let's talk about<br><em>what's next.</em></h2>
+      <p class="contact-sub">
+        Available from 1 June 2026 — based in Munich with unrestricted EU work authorization. Open to permanent roles across Germany and Austria in process optimization, controls, FP&A, and operational excellence.
+      </p>
+
+      <div class="contact-list">
+        <div class="contact-item">
+          <a href="mailto:aanchal.podarite@gmail.com">
+            <div class="label">Email</div>
+            <div class="val">aanchal.podarite@gmail.com</div>
+          </a>
+        </div>
+        <div class="contact-item">
+          <a href="tel:+491623687675">
+            <div class="label">Phone</div>
+            <div class="val">+49 162 368 7675</div>
+          </a>
+        </div>
+        <div class="contact-item">
+          <div class="label">Location</div>
+          <div class="val">Munich, Germany</div>
+        </div>
+        <div class="contact-item">
+          <div class="label">Availability</div>
+          <div class="val">01.06.2026 — onwards</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="shell">
+  <footer>
+    <div>© Aanchal Mahajan · MMXXVI</div>
+    <div>Set in Fraunces & Geist · Munich, DE</div>
+  </footer>
+</div>
+
+</body>
+</html>
